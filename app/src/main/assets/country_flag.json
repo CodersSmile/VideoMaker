@@ -1,0 +1,165 @@
+{
+  "country_flag": [
+    {
+      "Code": "no",
+      "Name": "Norway",
+      "url" : "file:///android_asset/flags/norway_flag_ic.png"
+    },
+    {
+      "Code": "de",
+      "Name": "Germany",
+      "url" : "file:///android_asset/flags/germany.png"
+    },
+    {
+      "Code": "ru",
+      "Name": "Russian Federation",
+      "url" : "file:///android_asset/flags/russia_flag.png"
+    },
+
+    {
+      "Code": "jp",
+      "Name": "Japan",
+      "url" : "file:///android_asset/flags/japan.png"
+    },
+
+    {
+      "Code": "dk",
+      "Name": "Denmark",
+      "url" : "file:///android_asset/flags/denmark.png"
+    },
+
+    {
+      "Code": "fr",
+      "Name": "France",
+      "url" : "file:///android_asset/flags/france_flag.png"
+    },
+
+    {
+      "Code": "ua",
+      "Name": "Ukraine",
+      "url" : "file:///android_asset/flags/ukraine_flag.png"
+    },
+
+    {
+      "Code": "br",
+      "Name": "Brazil",
+      "url" : "file:///android_asset/flags/brazil_flag.png"
+    },
+    {
+      "Code": "se",
+      "Name": "Sweden",
+      "url" : "file:///android_asset/flags/sweden_flag.png"
+    },
+
+    {
+      "Code": "sg",
+      "Name": "Singapore",
+      "url" : "file:///android_asset/flags/singapore.png"
+    },
+
+    {
+      "Code": "gb",
+      "Name": "United Kingdom",
+      "url" : "file:///android_asset/flags/uk.png"
+    },
+
+
+    {
+      "Code": "id",
+      "Name": "Indonesia",
+      "url" : "file:///android_asset/flags/indonesia.png"
+    },
+
+    {
+      "Code": "ie",
+      "Name": "Ireland",
+      "url" : "file:///android_asset/flags/ireland.png"
+    },
+
+
+    {
+      "Code": "ca",
+      "Name": "Canada",
+      "url" : "file:///android_asset/flags/canada.png"
+    },
+
+     {
+      "Code": "us",
+      "Name": "United States",
+      "url" : "file:///android_asset/flags/usa.png"
+    },
+     {
+      "Code": "ch",
+      "Name": "Switzerland",
+      "url" : "file:///android_asset/flags/switzerland.png"
+    },
+     {
+      "Code": "in",
+      "Name": "India",
+      "url" : "file:///android_asset/flags/india_flag.png"
+    },
+     {
+      "Code": "mx",
+      "Name": "Mexico",
+      "url" : "file:///android_asset/flags/mexico.png"
+    },
+     {
+      "Code": "it",
+      "Name": "Italy",
+      "url" : "file:///android_asset/flags/italy.png"
+    },
+     {
+      "Code": "es",
+      "Name": "Spain",
+      "url" : "file:///android_asset/flags/spain.png"
+    },
+     {
+      "Code": "ar",
+      "Name": "Argentina",
+      "url" : "file:///android_asset/flags/argentina.png"
+    },
+     {
+      "Code": "au",
+      "Name": "Australia",
+      "url" : "file:///android_asset/flags/australia.png"
+    },
+
+    {
+      "Code": "cz",
+      "Name": "Czech Republic",
+      "url" : "file:///android_asset/flags/Czech Republic.png"
+    },
+
+    {
+      "Code": "ro",
+      "Name": "Romania",
+      "url" : "file:///android_asset/flags/romania.png"
+    },
+
+    {
+      "Code": "nl",
+      "Name": "Netherlands",
+      "url" : "file:///android_asset/flags/netherlands.png"
+    },
+
+    {
+      "Code": "tr",
+      "Name": "Turkey",
+      "url" : "file:///android_asset/flags/turkey.png"
+    },
+
+    {
+      "Code": "hk",
+      "Name": "Hong Kong",
+      "url" : "file:///android_asset/flags/hongkong.png"
+    },
+
+    {
+      "Code": "bg",
+      "Name": "Bulgaria",
+      "url" : "file:///android_asset/flags/bulgaria.png"
+    }
+
+    
+  ]
+}

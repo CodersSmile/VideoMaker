@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorLight"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:background="@color/white"
+        android:id="@+id/mToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        app:contentInsetStart="0dp"
+        android:paddingStart="@dimen/_14dp"
+        android:paddingEnd="@dimen/_14dp">
+
+        <LinearLayout
+            android:layout_marginStart="@dimen/_10dp"
+            android:layout_marginEnd="@dimen/_10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/mMbtnBack"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:insetLeft="0dp"
+                android:insetTop="0dp"
+                android:insetRight="0dp"
+                android:insetBottom="0dp"
+                android:padding="0dp"
+                android:paddingStart="@dimen/_4dp"
+                android:paddingEnd="@dimen/_4dp"
+                android:text="@string/back"
+                android:textAllCaps="false"
+                android:textColor="@color/clrBtn"
+                app:backgroundTint="@color/colorOnBackground"
+                app:cornerRadius="@dimen/_20dp"
+                app:elevation="0dp"
+                app:icon="@drawable/ic_back"
+                app:iconGravity="textStart"
+                app:iconTint="@android:color/transparent"
+                app:iconTintMode="add"
+                app:rippleColor="?colorControlHighlight"
+                app:strokeWidth="0dp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/mMbtnSave"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:insetLeft="0dp"
+                android:insetTop="0dp"
+                android:insetRight="0dp"
+                android:insetBottom="0dp"
+                android:padding="0dp"
+                android:paddingStart="@dimen/_4dp"
+                android:paddingEnd="@dimen/_4dp"
+                android:text="@string/save"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                app:backgroundTint="@color/clrSave"
+                app:cornerRadius="@dimen/_20dp"
+                app:elevation="0dp"
+                app:rippleColor="?colorControlHighlight"
+                app:strokeWidth="0dp" />
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <AbsoluteLayout
+        android:id="@+id/waveformParent"
+        android:layout_width="fill_parent"
+        android:layout_height="140.0dip">
+
+        <ImageView
+            android:id="@+id/bkgnd"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scaleType="centerCrop" />
+
+        <com.ide.photoeditor.youshoot.cutomView.WaveformView
+            android:id="@+id/waveform"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+        <com.ide.photoeditor.youshoot.cutomView.MarkerView
+            android:id="@+id/startmarker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/start_marker"
+            android:nextFocusDown="@+id/endmarker"
+            android:src="@drawable/marker_left" />
+
+        <com.ide.photoeditor.youshoot.cutomView.MarkerView
+            android:id="@+id/endmarker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/end_marker"
+            android:nextFocusUp="@+id/startmarker"
+            android:nextFocusDown="@+id/info"
+            android:src="@drawable/marker_right" />
+    </AbsoluteLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="6.0dip" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMusicList"
+        android:layout_width="fill_parent"
+        android:background="@color/white"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/stack_drop_shadow_bottom_top"
+        android:minHeight="6.0dip" />
+
+    <LinearLayout
+        android:id="@+id/llButton"
+        android:layout_width="fill_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorLight"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/starttext"
+            android:layout_width="60.0dip"
+            android:layout_height="fill_parent"
+            android:contentDescription="@string/start_label"
+            android:gravity="center"
+            android:hint="Start"
+            android:textColor="@android:color/white"
+            android:textSize="12.0sp" />
+
+        <ImageButton
+            android:id="@+id/rew"
+            style="@android:style/MediaButton"
+            android:layout_width="64.0dip"
+            android:layout_height="52.0dip"
+            android:layout_marginTop="6.0dip"
+            android:layout_marginBottom="6.0dip"
+            android:background="@drawable/bg_card_transparent"
+            android:clickable="true"
+            android:contentDescription="@string/rewind"
+            android:src="@android:drawable/ic_media_previous" />
+
+        <ImageButton
+            android:id="@+id/play"
+            style="@android:style/MediaButton"
+            android:layout_width="71.0dip"
+            android:layout_height="52.0dip"
+            android:layout_marginTop="6.0dip"
+            android:layout_marginBottom="6.0dip"
+            android:background="@drawable/bg_card_transparent"
+            android:clickable="true"
+            android:contentDescription="@string/play"
+            android:src="@android:drawable/ic_media_play" />
+
+        <ImageButton
+            android:id="@+id/ffwd"
+            style="@android:style/MediaButton"
+            android:layout_width="64.0dip"
+            android:layout_height="52.0dip"
+            android:layout_marginTop="6.0dip"
+            android:layout_marginRight="5.0dip"
+            android:layout_marginBottom="6.0dip"
+            android:background="@drawable/bg_card_transparent"
+            android:clickable="true"
+            android:contentDescription="@string/ffwd"
+            android:src="@android:drawable/ic_media_next" />
+
+        <EditText
+            android:id="@+id/endtext"
+            android:layout_width="60.0dip"
+            android:layout_height="fill_parent"
+            android:contentDescription="@string/end_label"
+            android:gravity="center"
+            android:hint="End"
+            android:textColor="@android:color/white"
+            android:textSize="12.0sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/native_ads"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="@dimen/_70dp"
+        android:orientation="vertical" />
+</LinearLayout>

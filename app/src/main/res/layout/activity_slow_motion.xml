@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/mToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:paddingStart="@dimen/_14dp"
+        android:paddingEnd="@dimen/_14dp"
+        app:contentInsetEnd="0dp"
+        app:contentInsetStart="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/mMbtnBack"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:insetLeft="0dp"
+                android:insetTop="0dp"
+                android:insetRight="0dp"
+                android:insetBottom="0dp"
+                android:padding="0dp"
+                android:paddingStart="@dimen/_4dp"
+                android:paddingEnd="@dimen/_4dp"
+                android:text="@string/back"
+                android:textAllCaps="false"
+                android:textColor="@color/clrBtn"
+                app:backgroundTint="@color/colorOnBackground"
+                app:cornerRadius="@dimen/_20dp"
+                app:elevation="0dp"
+                app:icon="@drawable/ic_back"
+                app:iconGravity="textStart"
+                app:iconTint="@android:color/transparent"
+                app:iconTintMode="add"
+                app:rippleColor="?colorControlHighlight"
+                app:strokeWidth="0dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@string/slowmotion"
+                android:textAppearance="@style/TextAppearance.MyApp.Body2"
+                android:textColor="@color/clrBtn" />
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/_14dp"
+        android:layout_marginEnd="@dimen/_14dp"
+        android:layout_weight="1"
+        android:background="@color/bg">
+
+        <VideoView
+            android:id="@+id/videoView1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/buttonply1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_baseline_play_arrow_24"
+            app:backgroundTint="@color/clr_edit"
+            app:borderWidth="0dp"
+            app:fabSize="auto" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/_14dp"
+        android:paddingEnd="@dimen/_14dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/double_slow"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="0dp"
+            android:layout_height="34dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:layout_weight="1"
+            android:elevation="0dp"
+            android:gravity="center"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            android:padding="0dp"
+            android:stateListAnimator="@null"
+            android:text="-x2"
+            android:textAllCaps="false"
+            android:textColor="@color/clrcrop"
+            app:backgroundTint="@color/clr_select"
+            app:cornerRadius="@dimen/_20dp"
+            app:elevation="0dp"
+            app:rippleColor="?colorControlHighlight"
+            app:strokeWidth="0dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/quadre_slow"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="0dp"
+            android:layout_height="34dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:elevation="0dp"
+            android:gravity="center"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            android:padding="0dp"
+            android:stateListAnimator="@null"
+            android:text="-x4"
+            android:textAllCaps="false"
+            android:textColor="@color/clrcrop"
+            app:backgroundTint="@color/clr_edit"
+            app:cornerRadius="@dimen/_20dp"
+            app:elevation="0dp"
+            app:rippleColor="?colorControlHighlight"
+            app:strokeWidth="0dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_70dp"
+        android:layout_marginStart="@dimen/_14dp"
+        android:layout_marginEnd="@dimen/_14dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/mMbtnCancel"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            android:padding="0dp"
+            android:paddingStart="@dimen/_18dp"
+            android:paddingEnd="@dimen/_18dp"
+            android:text="@string/cancel"
+            android:textAllCaps="false"
+            android:textColor="@color/clrBtn"
+            app:backgroundTint="@color/colorOnBackground"
+            app:cornerRadius="@dimen/_20dp"
+            app:elevation="0dp"
+            app:rippleColor="?colorControlHighlight"
+            app:strokeWidth="0dp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/mMbtnSave"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            android:padding="0dp"
+            android:paddingStart="@dimen/_18dp"
+            android:paddingEnd="@dimen/_18dp"
+            android:text="@string/save"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/clrSave"
+            app:cornerRadius="@dimen/_20dp"
+            app:elevation="0dp"
+            app:icon="@drawable/ic_done"
+            app:iconGravity="textEnd"
+            app:iconTint="@android:color/transparent"
+            app:iconTintMode="add"
+            app:rippleColor="?colorControlHighlight"
+            app:strokeWidth="0dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/native_ads"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_70dp"
+        android:orientation="vertical" />
+</LinearLayout>

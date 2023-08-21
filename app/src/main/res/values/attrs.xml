@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="BiDirectionalSeekBar">
+        <attr name="BDS_indicatorColor" format="color" />
+        <attr name="BDS_stickColor" format="color" />
+        <attr name="BDS_stickGap" format="dimension" />
+        <attr name="BDS_zeroStickColor" format="color" />
+        <attr name="BDS_labelColor" format="color" />
+        <attr name="BDS_seekBarTitleColor" format="color" />
+        <attr name="BDS_minValue" format="integer" />
+        <attr name="BDS_maxValue" format="integer" />
+        <attr name="BDS_progress" format="integer" />
+        <attr name="BDS_percentageSign" format="boolean" />
+        <attr name="BDS_seekBarTitle" format="string" />
+        <attr name="BDS_seekBarTitleSize" format="enum">
+            <enum name="tiny" value="0" />
+            <enum name="normal" value="1" />
+        </attr>
+        <attr name="BDS_seekBar_Style" format="enum">
+            <enum name="curve" value="0" />
+            <enum name="linear" value="1" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="ScaleCardLayout">
+
+        <attr name="aspectRatioHeight" format="integer" />
+        <attr name="aspectRatioWidth" format="integer" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/_30dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/_12dp"
+        app:cardElevation="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10dp"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_marginEnd="@dimen/_10dp"
+            android:layout_marginBottom="@dimen/_10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_18dp"
+                android:gravity="center"
+                android:text="@string/exit"
+                android:textAppearance="@style/TextAppearance.MyApp.Subtitle1"
+                android:textColor="@color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/mMbtnCancel"
+                    style="@style/Widget.MaterialComponents.Button.Icon"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_6dp"
+                    android:layout_marginTop="@dimen/_20dp"
+                    android:layout_marginEnd="@dimen/_6dp"
+                    android:layout_marginBottom="@dimen/_20dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:insetLeft="0dp"
+                    android:insetTop="0dp"
+                    android:insetRight="0dp"
+                    android:insetBottom="0dp"
+                    android:padding="0dp"
+                    android:shadowColor="#FFCCCD"
+                    android:shadowDy="500"
+                    android:text="Cancle"
+                    android:textAllCaps="false"
+                    android:textAppearance="@style/TextAppearance.MyApp.Button"
+                    android:textColor="@color/black"
+                    app:backgroundTint="@color/clr_select"
+                    app:cornerRadius="@dimen/_28dp"
+                    app:rippleColor="?colorControlHighlight"
+                    app:strokeWidth="0dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/mMbtnDiscard"
+                    style="@style/Widget.MaterialComponents.Button.Icon"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_6dp"
+                    android:layout_marginTop="@dimen/_20dp"
+                    android:layout_marginEnd="@dimen/_6dp"
+                    android:layout_marginBottom="@dimen/_20dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:insetLeft="0dp"
+                    android:insetTop="0dp"
+                    android:insetRight="0dp"
+                    android:insetBottom="0dp"
+                    android:padding="0dp"
+                    android:shadowColor="#FFCCCD"
+                    android:shadowDy="500"
+                    android:text="Okay"
+                    android:textAllCaps="false"
+                    android:textAppearance="@style/TextAppearance.MyApp.Button"
+                    android:textColor="@color/black"
+                    app:backgroundTint="@color/clr_edit"
+                    app:cornerRadius="@dimen/_28dp"
+                    app:rippleColor="?colorControlHighlight"
+                    app:strokeWidth="0dp" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/mFrmNativeAdContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>

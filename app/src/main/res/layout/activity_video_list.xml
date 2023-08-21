@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/mToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:paddingStart="@dimen/_20dp"
+        android:paddingEnd="@dimen/_20dp"
+        app:contentInsetEnd="0dp"
+        app:contentInsetStart="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/mMbtnBack"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:insetLeft="0dp"
+                android:insetTop="0dp"
+                android:insetRight="0dp"
+                android:insetBottom="0dp"
+                android:padding="0dp"
+                android:paddingStart="@dimen/_4dp"
+                android:paddingEnd="@dimen/_4dp"
+                android:text="@string/back"
+                android:textAllCaps="false"
+                android:textColor="@color/clrBtn"
+                app:backgroundTint="@color/colorOnBackground"
+                app:cornerRadius="@dimen/_20dp"
+                app:elevation="0dp"
+                app:icon="@drawable/ic_back"
+                app:iconGravity="textStart"
+                app:iconTint="@android:color/transparent"
+                app:iconTintMode="add"
+                app:rippleColor="?colorControlHighlight"
+                app:strokeWidth="0dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="Select Video"
+                android:textAppearance="@style/TextAppearance.MyApp.Body2"
+                android:textColor="@color/clrBtn" />
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+      >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/videos_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/native_ads"
+            android:paddingStart="@dimen/_20dp"
+            android:paddingEnd="@dimen/_28dp"
+            android:clipToPadding="false"
+            android:paddingTop="16dp"
+            android:paddingBottom="88dp" />
+
+        <LinearLayout
+            android:id="@+id/native_ads"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_70dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical" />
+
+        <TextView
+            android:id="@+id/empty_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Empty"
+            android:textAppearance="@style/TextAppearance.MyApp.Headline6"
+            android:textColor="@color/clrBtn"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+</LinearLayout>

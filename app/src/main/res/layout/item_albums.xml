@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mLLMain"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_10dp"
+    android:layout_marginTop="@dimen/_6dp"
+    android:layout_marginEnd="@dimen/_10dp"
+    android:layout_marginBottom="@dimen/_6dp"
+    android:orientation="horizontal">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        app:cardCornerRadius="@dimen/_10dp">
+
+        <ImageView
+            android:id="@+id/mImgTop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/_20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/mTxtAlbumName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="Album Name"
+            android:textAppearance="@style/TextAppearance.MyApp.Subtitle1"
+            android:textColor="#272727" />
+
+        <TextView
+            android:id="@+id/mTxtTotal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="@dimen/_4dp"
+            android:text="Total Images"
+            android:textAppearance="@style/TextAppearance.MyApp.Body2"
+            android:textColor="#272727" />
+
+    </LinearLayout>
+</LinearLayout>

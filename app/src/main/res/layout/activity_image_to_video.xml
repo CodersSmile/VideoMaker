@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/mToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_marginStart="@dimen/_10dp"
+        android:layout_marginEnd="@dimen/_10dp"
+        android:paddingStart="@dimen/_14dp"
+        app:contentInsetStart="0dp"
+        android:paddingEnd="@dimen/_14dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/mMbtnBack"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:insetLeft="0dp"
+                android:insetTop="0dp"
+                android:insetRight="0dp"
+                android:insetBottom="0dp"
+                android:padding="0dp"
+                android:paddingStart="@dimen/_4dp"
+                android:paddingEnd="@dimen/_4dp"
+                android:text="@string/back"
+                android:textAllCaps="false"
+                android:textColor="@color/clrBtn"
+                app:backgroundTint="@color/colorOnBackground"
+                app:cornerRadius="@dimen/_20dp"
+                app:elevation="0dp"
+                app:icon="@drawable/ic_back"
+                app:iconGravity="textStart"
+                app:iconTint="@android:color/transparent"
+                app:iconTintMode="add"
+                app:rippleColor="?colorControlHighlight"
+                app:strokeWidth="0dp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/mMbtnSave"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:insetLeft="0dp"
+                android:insetTop="0dp"
+                android:insetRight="0dp"
+                android:insetBottom="0dp"
+                android:padding="0dp"
+                android:paddingStart="@dimen/_4dp"
+                android:paddingEnd="@dimen/_4dp"
+                android:text="@string/save"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                app:backgroundTint="@color/clrSave"
+                app:cornerRadius="@dimen/_20dp"
+                app:elevation="0dp"
+                app:rippleColor="?colorControlHighlight"
+                app:strokeWidth="0dp" />
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.ide.photoeditor.youshoot.cutomView.ScaleCardLayout xmlns:n3="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/scaleCard"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="4.0dip"
+            android:layout_marginTop="4.0dip"
+            android:layout_marginRight="4.0dip"
+            android:layout_marginBottom="6.0dip"
+            android:orientation="vertical"
+            n3:cardCornerRadius="4.0dip"
+            n3:cardElevation="6.0dip">
+
+            <com.ide.photoeditor.youshoot.cutomView.PreviewImageView
+                android:id="@+id/previewImageView1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/ivFrame"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_alignTop="@+id/previewImageView1"
+                android:layout_alignBottom="@+id/previewImageView1" />
+
+            <ImageView
+                android:id="@+id/ivPlayPause"
+                android:layout_width="80.0dip"
+                android:layout_height="fill_parent"
+                android:layout_alignTop="@+id/previewImageView1"
+                android:layout_alignBottom="@+id/previewImageView1"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_baseline_play_arrow_24" />
+
+            <View
+                android:id="@+id/video_clicker"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/bg_card_transparent"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/scaleCard"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="8.0dip"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/tvTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="12.0dip"
+                    android:paddingRight="4.0dip"
+                    android:text="@string/duration"
+                    android:textColor="?colorControlActivated" />
+
+                <SeekBar
+                    android:id="@+id/sbPlayTime"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1.0"
+                    android:padding="10.0dip" />
+
+                <TextView
+                    android:id="@+id/tvEndTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="4.0dip"
+                    android:paddingRight="12.0dip"
+                    android:text="@string/duration"
+                    android:textColor="?colorControlActivated" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/flLoader"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_alignTop="@+id/previewImageView1"
+                android:layout_alignBottom="@+id/previewImageView1"
+                android:layout_gravity="center"
+                android:background="#88000000"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/applying_theme"
+                    android:textColor="?colorPrimary" />
+            </LinearLayout>
+        </com.ide.photoeditor.youshoot.cutomView.ScaleCardLayout>
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvThemes"
+        android:layout_marginTop="@dimen/_4dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mMCVAddMusic"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginStart="@dimen/_20dp"
+        android:layout_marginEnd="@dimen/_20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:cardBackgroundColor="@color/colorOnBackground"
+        app:cardElevation="0dp"
+        app:cardCornerRadius="@dimen/_10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/_12dp"
+            android:drawableStart="@drawable/ic_slide_music"
+            android:drawablePadding="@dimen/_12dp"
+            android:text="@string/addmusic"
+            android:textAppearance="@style/TextAppearance.MyApp.Body2"
+            android:textColor="#2F2C2C" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:id="@+id/native_ads"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_70dp"
+        android:orientation="vertical" />
+</LinearLayout>
